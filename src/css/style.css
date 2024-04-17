@@ -1,0 +1,116 @@
+html {
+    --body-bg-color: #e5e7eb;
+    --body-color: #000;
+    --content-bg-color: #fff;
+    --actionbutton-color: #fff;
+    --actionbutton-bg-color: #00af5c;
+    --actionbutton-hover-bg-color: #009c4e;
+    --page-hover-bg-color: rgba(0, 0, 0, 0.1);
+}
+body {
+    margin: 0;
+    color: var(--body-color);
+    background-color: var(--body-bg-color);
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+#app,
+#container-main {
+    height: 100%;
+}
+#navigation {
+    display: flex;
+}
+#function-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 10px;
+    font-size: 0;
+    cursor: default;
+}
+.page {
+    font-size: 16px;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: color 0.2s, background-color 0.2s;
+}
+.page:hover {
+    background-color: var(--page-hover-bg-color);
+}
+.page-selected {
+    color: #009c4e;
+}
+@media screen and (max-width: 600px) {
+    #content {
+        width: 100%;
+        margin: 0 auto 30px auto;
+    }
+}
+@media screen and (min-width: 600px) {
+    #content {
+        width: 60%;
+        margin: 0 auto 70px auto;
+        margin: 10px auto 30px auto;
+    }
+}
+#content {
+    transition: all 250ms ease-in-out;
+    background-color: var(--content-bg-color);
+    border-radius: 20px;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+.topInfo {
+    text-align: center;
+    font-size: 3em;
+    font-family: "思源黑体 CN", "思源黑体", "黑体", sans-serif;
+    font-weight: lighter;
+}
+#pageInfo,
+.division {
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 2em;
+    font-family: "思源黑体 CN", "思源黑体", "黑体", sans-serif;
+    font-weight: lighter;
+}
+.cnt-txt {
+    padding: 15px;
+}
+.infoCard {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    font-family: "思源黑体 CN", "思源黑体", "黑体", sans-serif;
+}
+.infoCard:not(:last-child) {
+    margin-bottom: 10px;
+}
+.infoCardTime {
+    color: #009c4e;
+}
+.action-button {
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #00af5c;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+        Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC,
+        WenQuanYi Micro Hei, sans-serif;
+}
+.action-button:hover {
+    background-color: #009c4e;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
